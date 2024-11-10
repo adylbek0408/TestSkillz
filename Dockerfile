@@ -11,5 +11,5 @@ ENV PYTHONUNBUFFERED=1
 
 EXPOSE 8000
 
-# Удаляем команду collectstatic отсюда, так как она будет выполняться через entrypoint
-CMD ["gunicorn", "skillz.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Изменяем путь к manage.py
+CMD ["python", "skillz/manage.py", "runserver", "0.0.0.0:8000"]
