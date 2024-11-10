@@ -9,8 +9,7 @@ COPY . .
 
 ENV PYTHONUNBUFFERED=1
 
-RUN python manage.py collectstatic --noinput
-
 EXPOSE 8000
 
+# Удаляем команду collectstatic отсюда, так как она будет выполняться через entrypoint
 CMD ["gunicorn", "skillz.wsgi:application", "--bind", "0.0.0.0:8000"]
