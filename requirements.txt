@@ -14,3 +14,4 @@ typing_extensions
 tzdata
 uritemplate
 gunicorn
+django-cors-headers
