@@ -11,7 +11,7 @@ class CourseAdmin(admin.ModelAdmin):
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ['course', 'author', 'new_price', 'created_date', 'updated_date']
+    list_display = ['course', 'author', 'image', 'created_date', 'updated_date']
     list_filter = ['created_date', 'updated_date']
 
 

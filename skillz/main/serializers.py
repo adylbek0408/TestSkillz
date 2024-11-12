@@ -9,7 +9,7 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ['id', 'course', 'course_name', 'author', 'image', 'course_id', 'new_price', 'created_date', 'updated_date']
+        fields = '__all__'
 
 
 class CourseSerializer(serializers.ModelSerializer):
@@ -17,11 +17,10 @@ class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = ['id', 'name', 'author', 'price', 'image', 'description', 'city', 'created_date', 'updated_date',
-                  'articles']
+        fields = '__all__'
 
 
 class FreeWorkshopsSerializer(serializers.ModelSerializer):
     class Meta:
         model = FreeWorkshops
-        fields = ['id', 'name', 'description', 'created_date']
+        fields = '__all__'
