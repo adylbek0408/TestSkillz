@@ -13,12 +13,11 @@ class Course(models.Model):
 
 
 class Article(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='Курсы', related_name='article_course')
+    name = models.CharField(max_length=155, verbose_name='Название')
+    author = models.CharField(max_length=100, verbose_name='Автор')
     image = models.ImageField(verbose_name='Картинка')
-    author = models.CharField(max_length=155, verbose_name='Автор курса')
-    new_price = models.FloatField(verbose_name='Цена')
     created_date = models.DateField(verbose_name='Дата создание')
-    updated_date = models.DateTimeField(verbose_name='Дата обновлении')
+    updated_date = models.DateTimeField(verbose_name='Дата обновлении', null=True, blank=True)
 
 
 class FreeWorkshops(models.Model):
