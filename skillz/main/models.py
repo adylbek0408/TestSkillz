@@ -14,6 +14,8 @@ class Course(models.Model):
 
 class Article(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='Курсы', related_name='article_course')
+    image = models.ImageField(verbose_name='Картинка')
+    author = models.CharField(max_length=155, verbose_name='Автор курса')
     new_price = models.FloatField(verbose_name='Цена')
     created_date = models.DateField(verbose_name='Дата создание')
     updated_date = models.DateTimeField(verbose_name='Дата обновлении')
