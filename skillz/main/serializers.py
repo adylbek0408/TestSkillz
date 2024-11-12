@@ -9,7 +9,7 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ['id', 'course', 'course_name', 'course_id', 'new_price', 'created_date', 'updated_date']
+        fields = ['id', 'course', 'course_name', 'author', 'image', 'course_id', 'new_price', 'created_date', 'updated_date']
 
 
 class CourseSerializer(serializers.ModelSerializer):
