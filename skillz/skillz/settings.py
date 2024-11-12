@@ -24,10 +24,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'main',
     'drf_yasg',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -55,10 +57,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'skillz.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
